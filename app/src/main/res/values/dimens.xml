@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tinyButtonWidth">140dp</dimen>
+    <dimen name="tinyButtonheight">70dp</dimen>
+    <dimen name="buttonCorners">12dp</dimen>
+    <dimen name="mediumButtonWidth">180dp</dimen>
+    <dimen name="midiumButtonHeight">50dp</dimen>
+    <dimen name="edittextHeight">50dp</dimen>
+</resources>

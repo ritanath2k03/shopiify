@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597584282566",
+    "project_id": "shopiify-cf0da",
+    "storage_bucket": "shopiify-cf0da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597584282566:android:d82bdafc6b4186dbd368c7",
+        "android_client_info": {
+          "package_name": "com.ritanath.shopiify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHrtIkg8WBUdIOOx9ElnaXnFBIJoCQacw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

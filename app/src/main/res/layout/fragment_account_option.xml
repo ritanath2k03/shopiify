@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/blury_background" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/h4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:drawableStart="@mipmap/ic_launcher_round"
+            android:text="Shopiify"
+            app:layout_constraintBottom_toBottomOf="@id/topguideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/toptext"
+            style="@style/h3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            android:text="\nHere is your \n Shameless Shopping \n Hub"
+            app:layout_constraintBottom_toTopOf="@+id/middleguideline"
+            app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+            app:layout_constraintStart_toStartOf="@+id/leftguideline"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            style="@style/h2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="Enjoy unlimited \nshopping\n with\n Shopiify"
+            app:layout_constraintBottom_toBottomOf="@+id/toptext"
+            app:layout_constraintEnd_toEndOf="@+id/toptext"
+            app:layout_constraintStart_toStartOf="@+id/toptext"
+            app:layout_constraintTop_toBottomOf="@+id/horimidguideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middleguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".8" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
+            style="@style/whiteButtonStyle"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/midiumButtonHeight"
+            android:layout_marginTop="10dp"
+            android:text="Login"
+            app:layout_constraintLeft_toLeftOf="@id/leftguideline"
+            app:layout_constraintRight_toRightOf="@id/rightguideline"
+            app:layout_constraintTop_toTopOf="@id/middleguideline" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/blueButtonStyle"
+            android:layout_width="@dimen/mediumButtonWidth"
+            android:layout_height="@dimen/midiumButtonHeight"
+            android:layout_marginTop="10dp"
+            android:text="Register"
+            app:layout_constraintEnd_toStartOf="@+id/rightguideline"
+            app:layout_constraintLeft_toLeftOf="@id/leftguideline"
+            app:layout_constraintRight_toRightOf="@id/rightguideline"
+            app:layout_constraintStart_toStartOf="@+id/leftguideline"
+            app:layout_constraintTop_toBottomOf="@id/login" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horimidguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.41" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
