@@ -1,15 +1,15 @@
-import org.jetbrains.kotlin.gradle.model.Kapt
+
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-parcelize")
     id ("androidx.navigation.safeargs.kotlin")
-   id ("dagger.hilt.android.plugin")
+//    id ("kotlin-kapt")
+    id ("dagger.hilt.android.plugin")
 
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
     id("com.google.gms.google-services")
+    id("com.google.dagger.hilt.android")
     id ("kotlin-kapt")
 }
 
@@ -23,13 +23,13 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+//            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -43,6 +43,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding =true
+    }
+
 
 }
 
@@ -77,12 +81,15 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation ("io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1")
     //Dagger hilt
-    implementation("com.google.dagger:hilt-android:2.38.1")
-
-    implementation("com.google.dagger:hilt-android:2.38.1")
-   kapt("com.google.dagger:hilt-android-compiler:2.44")
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+    val multidex_version = "2.0.1"
+    implementation("androidx.multidex:multidex:$multidex_version")
 
 }
 
 // Allow references to generated code
 
+kapt{
+    correctErrorTypes=true
+}

@@ -15,6 +15,7 @@ dependencyResolutionManagement {
         //noinspection JcenterRepositoryObsolete
         jcenter()
     }
+
 }
 
 rootProject.name = "Shopiify"

@@ -11,7 +11,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import javax.inject.Inject
 
 @HiltViewModel
-class RegisterViewModel@Inject constructor(private val auth:FirebaseAuth):ViewModel(){
+class RegisterViewModel @Inject constructor(
+    private val auth: FirebaseAuth,
+) : ViewModel(){
 private val _register=MutableStateFlow<Resource<FirebaseUser>>(Resource.Loading())
 val register: Flow<Resource<FirebaseUser>> =_register
 fun createUserWithEmailAndPassword(user:User,password:String){

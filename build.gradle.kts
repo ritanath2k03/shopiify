@@ -1,16 +1,21 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+import com.android.build.gradle.internal.dsl.decorator.SupportedPropertyType.Collection.List.type
 
 buildscript {
     dependencies {
-        classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
         classpath ("com.google.dagger:hilt-android-gradle-plugin:2.40.1")
-        classpath("com.google.gms:google-services:4.4.1")
+        classpath ("com.google.gms:google-services:4.3.13")
+
+        val nav_version = "2.5.0"
+        classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
     }
-}
-plugins {
-    id("com.android.application") version "8.2.1" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.22" apply false
-    id ("androidx.navigation.safeargs") version "2.7.7" apply false
-    id ("com.google.dagger.hilt.android") version "2.41" apply false
 
 }
+
+plugins {
+    id ("com.android.application") version ("7.3.0") apply false
+    id ("com.android.library") version ("7.3.0") apply false
+    id ("org.jetbrains.kotlin.android") version ("1.9.0") apply false
+    id("com.google.dagger.hilt.android") version ("2.48") apply false
+}
+
+
