@@ -89,6 +89,7 @@
             app:layout_constraintTop_toTopOf="@id/middleguideline" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register"
             style="@style/blueButtonStyle"
             android:layout_width="@dimen/mediumButtonWidth"
             android:layout_height="@dimen/midiumButtonHeight"

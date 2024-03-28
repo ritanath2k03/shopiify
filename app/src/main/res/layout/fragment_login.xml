@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.63" />
+            app:layout_constraintGuide_percent="0.68" />
 
         <TextView
             style="@style/h4"
@@ -100,26 +100,27 @@
             app:layout_constraintTop_toBottomOf="@id/emaillogin" />
 
         <TextView
+            android:id="@+id/textView4"
             style="@style/h1TextSize"
             android:layout_width="0dp"
             android:layout_height="30dp"
+            android:gravity="right"
             android:layout_marginTop="10dp"
             android:text="Forgot Password?"
             app:layout_constraintLeft_toLeftOf="@id/leftguideline"
             app:layout_constraintRight_toRightOf="@id/rightguideline"
             app:layout_constraintTop_toBottomOf="@id/passwordlogin" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/loginbtn"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/midiumButtonHeight"
             android:text="Login"
-            app:layout_constraintBottom_toBottomOf="@id/lowermiddleguideline"
             app:layout_constraintLeft_toLeftOf="@id/leftguideline"
             app:layout_constraintRight_toRightOf="@id/rightguideline"
 
-            />
+            app:layout_constraintTop_toBottomOf="@+id/lowermiddleguideline" />
 
 
 
@@ -158,5 +159,20 @@
             app:layout_constraintTop_toTopOf="@id/googleLogin"
             app:layout_constraintBottom_toBottomOf="@id/googleLogin"
             app:layout_constraintEnd_toEndOf="@id/googleLogin"/>
+
+        <TextView
+            android:id="@+id/gotoregister"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:text="Create New Account"
+            style="@style/h2"
+            android:gravity="center"
+            android:textColor="@color/g_black"
+            app:layout_constraintLeft_toLeftOf="@id/leftguideline"
+            app:layout_constraintRight_toRightOf="@id/rightguideline"
+            app:layout_constraintTop_toBottomOf="@id/facebookLogin"
+            app:layout_constraintVertical_bias="0.285" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

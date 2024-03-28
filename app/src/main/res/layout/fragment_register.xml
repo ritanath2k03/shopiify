@@ -52,10 +52,10 @@
 
         <TextView
 
-            android:drawableStart="@mipmap/ic_launcher_round"
             style="@style/h4"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:drawableStart="@mipmap/ic_launcher_round"
             android:text="Join Now"
             app:layout_constraintBottom_toBottomOf="@id/middleguideline"
             app:layout_constraintLeft_toLeftOf="@id/leftguideline"
@@ -109,9 +109,10 @@
             app:layout_constraintTop_toBottomOf="@id/emaillogin" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/haveAccount"
             style="@style/h1TextSize"
             android:layout_width="0dp"
+            android:gravity="right"
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
             android:text="Already Have Acoount?"
@@ -125,10 +126,10 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/midiumButtonHeight"
             android:text="register"
-            app:layout_constraintBottom_toBottomOf="@id/lowermiddleguideline"
+            app:layout_constraintTop_toTopOf="@id/bottomguideline"
             app:layout_constraintLeft_toLeftOf="@id/leftguideline"
             app:layout_constraintRight_toRightOf="@id/rightguideline"
-
+    app:spinning_bar_color="@color/g_blue100"
             />
 
 
@@ -136,8 +137,10 @@
             android:id="@+id/facebookLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="23dp"
             android:src="@drawable/facebook_login"
+            app:layout_constraintEnd_toStartOf="@+id/googleLogin"
             app:layout_constraintStart_toStartOf="@id/leftguideline"
             app:layout_constraintTop_toBottomOf="@id/registerbtn" />
 
@@ -155,6 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="23dp"
+            android:layout_marginLeft="5dp"
             android:src="@drawable/google_login"
             app:layout_constraintEnd_toEndOf="@id/rightguideline"
             app:layout_constraintTop_toBottomOf="@id/registerbtn" />
@@ -173,6 +177,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent=".25" />
+            app:layout_constraintGuide_percent="0.32" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomguideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".7" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

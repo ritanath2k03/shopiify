@@ -63,6 +63,7 @@ app:layout_constraintBottom_toBottomOf="@id/middleguideline"
         style="@style/h2"
         />
 <Button
+    android:id="@+id/startbtn"
     android:layout_height="@dimen/tinyButtonheight"
     android:layout_width="@dimen/tinyButtonWidth"
     app:layout_constraintLeft_toLeftOf="@id/leftguideline"
