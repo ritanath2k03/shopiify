@@ -87,6 +87,12 @@ dependencies {
     val multidex_version = "2.0.1"
     implementation("androidx.multidex:multidex:$multidex_version")
 
+
+    val nav_version = "2.7.7"
+    implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+
 }
 
 // Allow references to generated code
