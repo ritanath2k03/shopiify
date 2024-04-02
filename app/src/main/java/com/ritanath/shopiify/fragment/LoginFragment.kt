@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.ritanath.shopiify.R
@@ -43,9 +44,11 @@ class LoginFragment : Fragment(R.layout.fragment_login){
                 viewModel.login(email,password)
             }
         }
+
         lifecycleScope.launchWhenStarted {
             viewModel.loginstate.collect{
                 when(it){
+
                     is Resource.Success->{ binding.loginbtn.revertAnimation()
                 Intent(requireActivity(),ShoppingActivity::class.java).also {
                     intent ->
@@ -65,4 +68,5 @@ Toast.makeText(requireContext(),it.message,Toast.LENGTH_SHORT).show()
             }
         }
     }
+
 }
