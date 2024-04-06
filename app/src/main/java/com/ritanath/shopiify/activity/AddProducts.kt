@@ -35,10 +35,10 @@ import java.util.UUID
 
 class AddProducts : AppCompatActivity() {
 
-    private val storage= Firebase.storage.reference
+    private val storage = Firebase.storage.reference
     private val selectedImages = mutableListOf<Uri>()
     private val colors = mutableListOf<Int>()
-    private val firestore=Firebase.firestore
+    private val firestore = Firebase.firestore
     private val binding by lazy { ActivityAddProductsBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -113,53 +113,60 @@ class AddProducts : AppCompatActivity() {
     }
 
     private fun saveProducts() {
-       binding.buttonupload.startAnimation()
+        binding.buttonupload.startAnimation()
         val allSizes = getSizes(binding.edSizes.text.toString().trim())
         val name = binding.edName.text.toString().trim()
         val price = binding.edPrice.text.toString().trim()
-        val catagory =binding.edCategory.text.toString().trim()
+        val catagory = binding.edCategory.text.toString().trim()
         val imageArray = getImages()
         val description = binding.edDescription.text.toString().trim()
         val offer = binding.offerPercentage.text.toString().trim()
-    val images= mutableListOf<String>()
+        val images = mutableListOf<String>()
         lifecycleScope.launch(Dispatchers.IO) {
-        withContext(Dispatchers.Main){
-            binding.buttonupload.startAnimation()
-        }
+            withContext(Dispatchers.Main) {
+                binding.buttonupload.startAnimation()
+            }
             try {
-             async {
-                 imageArray.forEach{
-                     val id=UUID.randomUUID().toString()
-                    launch {
-                    val imageStorage=storage.child("products/images/$id")
-                      val res=  imageStorage.putBytes(it).await()
-                        val downloadUrl=res.storage.downloadUrl.await().toString()
-                        images.add(downloadUrl)
+                async {
+                    imageArray.forEach {
+                        val id = UUID.randomUUID().toString()
+                        launch {
+                            val imageStorage = storage.child("products/images/$id")
+                            val res = imageStorage.putBytes(it).await()
+                            val downloadUrl = res.storage.downloadUrl.await().toString()
+                            images.add(downloadUrl)
+                        }
                     }
-                 }
-             }.await()
-            }catch (e:Exception){
+                }.await()
+            } catch (e: Exception) {
                 e.printStackTrace()
-                withContext(Dispatchers.Main){
+                withContext(Dispatchers.Main) {
                     binding.buttonupload.revertAnimation()
                 }
             }
-            val product=Product(
+            val product = Product(
                 UUID.randomUUID().toString(),
                 name,
                 catagory,
                 price.toFloat(),
-                if(offer.isEmpty())null else offer.toFloat(),
-                if(description.isEmpty())null else description,
-                if(colors.isEmpty())null else colors,
+                if (offer.isEmpty()) null else offer.toFloat(),
+                if (description.isEmpty()) null else description,
+                if (colors.isEmpty()) null else colors,
                 sizes = null,
                 images
             )
             firestore.collection("Products").add(product).addOnSuccessListener {
-            Log.d("Tag","Product Added")
+                Log.d("Tag", "Product Added")
                 binding.buttonupload.revertAnimation()
+                binding.edName.setText("")
+                binding.edCategory.setText("")
+                binding.edPrice.setText("")
+                binding.offerPercentage.setText("")
+                binding.edSizes.setText("")
+                colors.clear()
+                images.clear()
             }.addOnFailureListener {
-Log.d("Tag",it.toString())
+                Log.d("Tag", it.toString())
                 binding.buttonupload.revertAnimation()
             }
         }
@@ -167,9 +174,9 @@ Log.d("Tag",it.toString())
 
     private fun getImages(): List<ByteArray> {
         val imageArray = mutableListOf<ByteArray>()
-        selectedImages.forEach{
+        selectedImages.forEach {
             val stream = ByteArrayOutputStream()
-            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver,it)
+            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, it)
             if (bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)) {
                 imageArray.add(stream.toByteArray())
             }

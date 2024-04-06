@@ -50,6 +50,12 @@
     </style>
     <style name="h1TextSize">10dp</style>
 
+    <style name="revViewStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="backgroundColor">@color/g_show</item>
+        </style>
+
 
     <dimen name="h4TextSize">35sp</dimen>
     <dimen name="h2TextSize">17sp</dimen>

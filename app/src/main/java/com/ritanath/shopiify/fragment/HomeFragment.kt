@@ -35,7 +35,7 @@ class HomeFragment :Fragment(R.layout.fragment_home){
         val listOfCatagory= arrayListOf<Fragment>(HomeCatagoryFragment(),ToyCatagoryFragment(),ElectronicCatagoryFragment(),BooksCatagoryFragment(),
             GroceryCatagoruFragment()
         )
-
+        binding.homeviewpager.isUserInputEnabled=false
         val homeAdapter= HomeViewPagerAdapter(listOfCatagory,childFragmentManager,lifecycle)
         binding.homeviewpager.adapter=homeAdapter
         TabLayoutMediator(binding.hometabLayout,binding.homeviewpager){

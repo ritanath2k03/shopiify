@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/g_whitesmoke"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -31,6 +32,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSpecialProducts"
                 android:layout_width="0dp"
+                style="@style/revViewStyle"
+
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"

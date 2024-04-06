@@ -6,5 +6,7 @@
 
     </style>
 
-    <style name="Theme.Shopiify" parent="Base.Theme.Shopiify" />
+    <style name="Theme.Shopiify" parent="Base.Theme.Shopiify" >
+
+    </style>
 </resources>

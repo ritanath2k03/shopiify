@@ -5,8 +5,9 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.ritanath.shopiify.R
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ShoppingActivity : AppCompatActivity() {
 
     val binding by lazy {
