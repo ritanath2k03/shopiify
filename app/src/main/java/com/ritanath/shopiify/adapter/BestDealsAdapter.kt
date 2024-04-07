@@ -1,5 +1,6 @@
 package com.example.kelineyt.adapters
 
+import android.graphics.Paint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -23,6 +24,7 @@ class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHold
                     tvNewPrice.text = "$ ${String.format("%.2f",priceAfterOffer)}"
                 }
                 tvOldPrice.text = "$ ${product.price}"
+                tvOldPrice.paintFlags=tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 tvDealProductName.text = product.name
             }
         }
