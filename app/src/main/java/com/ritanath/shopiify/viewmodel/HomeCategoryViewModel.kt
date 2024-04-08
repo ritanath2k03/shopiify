@@ -2,9 +2,9 @@ package com.ritanath.shopiify.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.productsadder.Product
 import com.google.firebase.firestore.FirebaseFirestore
 import com.ritanath.shopiify.data.Models
+import com.ritanath.shopiify.data.Product
 import com.ritanath.shopiify.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

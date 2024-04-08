@@ -1,4 +1,4 @@
-package com.ritanath.shopiify.fragment
+package com.ritanath.shopiify.fragment.supportfragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

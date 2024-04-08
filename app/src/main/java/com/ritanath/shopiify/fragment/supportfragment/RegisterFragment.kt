@@ -1,4 +1,4 @@
-package com.ritanath.shopiify.fragment
+package com.ritanath.shopiify.fragment.supportfragment
 
 import android.os.Build
 import android.os.Bundle
@@ -22,7 +22,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.util.Date
 
 @AndroidEntryPoint
 class RegisterFragment : Fragment(R.layout.fragment_register) {

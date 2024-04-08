@@ -1,4 +1,4 @@
-package com.example.kelineyt.adapters
+package com.ritanath.shopiify.adapter
 
 import android.graphics.Paint
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.productsadder.Product
+import com.ritanath.shopiify.data.Product
 import com.ritanath.shopiify.databinding.BestDealsRvItemBinding
 
 class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder>() {
@@ -22,9 +22,12 @@ class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHold
                     val remainingPricePercentage = 1f - it
                     val priceAfterOffer = remainingPricePercentage * product.price
                     tvNewPrice.text = "$ ${String.format("%.2f",priceAfterOffer)}"
+                    tvOldPrice.paintFlags=tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 }
+
                 tvOldPrice.text = "$ ${product.price}"
-                tvOldPrice.paintFlags=tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+
+
                 tvDealProductName.text = product.name
             }
         }

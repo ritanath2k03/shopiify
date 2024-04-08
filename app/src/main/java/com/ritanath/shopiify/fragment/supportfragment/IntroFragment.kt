@@ -1,4 +1,4 @@
-package com.ritanath.shopiify.fragment
+package com.ritanath.shopiify.fragment.supportfragment
 
 import android.content.Intent
 import android.os.Bundle

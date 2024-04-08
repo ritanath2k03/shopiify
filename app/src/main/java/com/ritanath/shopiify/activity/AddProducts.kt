@@ -12,12 +12,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.lifecycleScope
-import com.example.productsadder.Product
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
+import com.ritanath.shopiify.data.Product
 import com.ritanath.shopiify.databinding.ActivityAddProductsBinding
 import com.skydoves.colorpickerview.ColorEnvelope
 import com.skydoves.colorpickerview.ColorPickerDialog
@@ -152,7 +152,7 @@ class AddProducts : AppCompatActivity() {
                 if (offer.isEmpty()) null else offer.toFloat(),
                 if (description.isEmpty()) null else description,
                 if (colors.isEmpty()) null else colors,
-                sizes = null,
+               allSizes?.let { allSizes },
                 images
             )
             firestore.collection("Products").add(product).addOnSuccessListener {

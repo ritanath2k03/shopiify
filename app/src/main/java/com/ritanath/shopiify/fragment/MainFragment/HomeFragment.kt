@@ -1,4 +1,4 @@
-package com.ritanath.shopiify.fragment
+package com.ritanath.shopiify.fragment.MainFragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.ritanath.shopiify.R
 import com.ritanath.shopiify.activity.AddProducts
-import com.ritanath.shopiify.activity.ShoppingActivity
 import com.ritanath.shopiify.adapter.HomeViewPagerAdapter
 import com.ritanath.shopiify.databinding.FragmentHomeBinding
 import com.ritanath.shopiify.fragment.catagorietype.BooksCatagoryFragment
@@ -52,7 +51,6 @@ class HomeFragment :Fragment(R.layout.fragment_home){
            binding.uploadProduct.setOnClickListener {
                Intent(requireActivity(), AddProducts::class.java).also {
                        intent ->
-                   intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                    startActivity(intent)
                }
            }

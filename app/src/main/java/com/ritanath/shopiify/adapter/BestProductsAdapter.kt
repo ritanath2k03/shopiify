@@ -1,4 +1,4 @@
-package com.example.kelineyt.adapters
+package com.ritanath.shopiify.adapter
 
 import android.graphics.Paint
 import android.util.Log
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.productsadder.Product
+import com.ritanath.shopiify.data.Product
 import com.ritanath.shopiify.databinding.ProductRvItemBinding
 
 class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProductsViewHolder>() {
@@ -22,14 +22,16 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
                     val remainingPricePercentage = 1f - it
                     val priceAfterOffer = remainingPricePercentage * product.price
                     tvNewPrice.text = "$ ${String.format("%.2f",priceAfterOffer)}"
+                    tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 }
-                tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+
                 if (product.offerPercentage == null)
                     tvNewPrice.visibility = View.INVISIBLE
 
                 Glide.with(itemView).load(product.images[0]).into(imgProduct)
                 tvPrice.text = "$ ${product.price}"
                 tvName.text = product.name
+
             }
 
         }

@@ -41,7 +41,6 @@ class LoginViewModel @Inject constructor(
     }
 
     private fun checkLoggedInState() {
-        Log.d("userStatus","working")
         val currentUser = FirebaseAuth.getInstance().currentUser
         _isLoggedIn.value = currentUser != null
     }
