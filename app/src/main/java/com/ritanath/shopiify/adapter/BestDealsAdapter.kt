@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ritanath.shopiify.data.Product
 import com.ritanath.shopiify.databinding.BestDealsRvItemBinding
+import com.ritanath.shopiify.util.getPrice
 
 class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder>() {
 
@@ -19,8 +20,8 @@ class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHold
             binding.apply {
                 Glide.with(itemView).load(product.images[0]).into(imgBestDeal)
                 product.offerPercentage?.let {
-                    val remainingPricePercentage = 1f - it
-                    val priceAfterOffer = remainingPricePercentage * product.price
+
+                    val priceAfterOffer = product.offerPercentage.getPrice(product.price)
                     tvNewPrice.text = "$ ${String.format("%.2f",priceAfterOffer)}"
                     tvOldPrice.paintFlags=tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 }

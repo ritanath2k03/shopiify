@@ -43,7 +43,7 @@
                 android:fontFamily="@font/poppins_light"
                 android:paddingLeft="5dp"
                 android:text="Chair"
-                android:textColor="@color/black"
+                android:textColor="@color/g_snow"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
                 android:layout_marginEnd="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_favorite"
-                app:tint="@color/g_blue_gray200" />
+                app:tint="@color/light_green" />
         </LinearLayout>
 
 
@@ -68,7 +68,7 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textColor="@color/black"
+            android:textColor="@color/g_whitesmoke"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/tv_price"
@@ -82,7 +82,7 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            android:textColor="@color/black"
+            android:textColor="@color/g_whitesmoke"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/img_product"

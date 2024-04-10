@@ -8,7 +8,7 @@
         android:id="@+id/imageShadow"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:src="#B8D9FA"
+        android:src="@color/green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:visibility="invisible"/>
@@ -17,7 +17,7 @@
         android:id="@+id/imageColor"
         android:layout_width="21dp"
         android:layout_height="21dp"
-        android:src="@color/g_gray500"
+        android:src="@color/g_blue100"
         app:layout_constraintStart_toStartOf="@id/imageShadow"
         app:layout_constraintTop_toTopOf="@id/imageShadow"
         app:layout_constraintEnd_toEndOf="@id/imageShadow"
@@ -34,6 +34,6 @@
         android:text="S"
         android:textAlignment="center"
         android:textSize="12sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/dark_blue"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

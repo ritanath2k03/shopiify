@@ -24,7 +24,7 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="@drawable/white_background"
+        android:background="@color/dark_blue"
         app:elevation="0dp"
         app:itemIconTint="@drawable/bottom_nav_item_background"
         app:itemPaddingBottom="10dp"

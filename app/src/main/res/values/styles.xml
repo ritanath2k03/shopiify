@@ -15,7 +15,7 @@
 
     <style name="h3">
         <item name="android:fontFamily">@font/poppins_light</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/g_whitesmoke</item>
         <item name="android:textSize">@dimen/h3TextSize</item>
     </style>
 
@@ -43,10 +43,11 @@
         <item name="android:fontFamily">@font/poppins_light</item>
     </style>
     <style name="tabLayout_text" parent="TextAppearance.AppCompat">
-        <item name="color">@color/g_gray500</item>
+        <item name="color">@color/g_whitesmoke</item>
         <item name="fontFamily">@font/sf_pro_display</item>
         <item name="textAllCaps">false</item>
         <item name="android:textStyle">bold</item>
+        <item name="textFillColor">@color/g_snow</item>
 
     </style>
     <style name="h1TextSize">10dp</style>
@@ -54,7 +55,7 @@
     <style name="revViewStyle">
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="backgroundColor">@color/g_snow</item>
+        <item name="backgroundColor">@color/dark_blue</item>
         </style>
 
     <style name="boxitemview">

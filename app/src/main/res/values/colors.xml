@@ -21,4 +21,13 @@
     <color name="g_green">#11FF00</color>
     <color name="g_transparent">#00FFFFFF</color>
 
+    <!-- dark mode-->
+    <color name="dark_gray">#121212</color>
+    <color name="dark_blue">#211951</color>
+    <color name="light_blue">#836FFF</color>
+    <color name="light_green">#15F5BA</color>
+    <color name="light_white">#F0F3FF</color>
+
+
+
 </resources>

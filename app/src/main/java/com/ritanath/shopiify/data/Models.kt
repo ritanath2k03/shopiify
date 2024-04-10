@@ -4,6 +4,8 @@ class Models {
 
 
     companion object {
+        val CART: String="cart"
+        val USERS: String="Users"
         val OFFER_PERCENTAGE: String = "offerPercentage"
         val BOOK: String="book"
         val ELECTRONICS: String="electronics"
