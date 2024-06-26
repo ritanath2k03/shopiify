@@ -34,6 +34,6 @@
         android:text="S"
         android:textAlignment="center"
         android:textSize="12sp"
-        android:textColor="@color/dark_blue"/>
+        android:textColor="@color/dark_primary"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

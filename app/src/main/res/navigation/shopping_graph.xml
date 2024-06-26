@@ -22,12 +22,19 @@
         <action
             android:id="@+id/action_cartFragment_to_productViewFragment"
             app:destination="@id/productViewFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
     </fragment>
     <fragment
         android:id="@+id/personFragment"
         android:name="com.ritanath.shopiify.fragment.MainFragment.PersonFragment"
         tools:layout="@layout/fragment_person"
-        android:label="PersonFragment" />
+        android:label="PersonFragment" >
+        <action
+            android:id="@+id/action_personFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+    </fragment>
     <fragment android:id="@+id/searchFragment"
         android:name="com.ritanath.shopiify.fragment.MainFragment.SearchFragment"
         tools:layout="@layout/fragment_search"
@@ -42,14 +49,31 @@
         android:label="ProductViewFragment"
         tools:layout="@layout/fragment_product_view"
         >
-
-
-
         <argument
             android:name="products"
             app:argType="com.ritanath.shopiify.data.Product"
             app:nullable="true"
             android:defaultValue="@null"
           />
+    </fragment>
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.ritanath.shopiify.fragment.MainFragment.AddressFragment"
+        android:label="AddressFragment"
+        tools:layout="@layout/fragment_adderss"/>
+    <fragment
+        android:id="@+id/billingFragment"
+        android:name="com.ritanath.shopiify.fragment.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <action
+            android:id="@+id/action_billingFragment_to_addressFragment"
+            app:destination="@id/addressFragment" />
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="billingProducts"
+            app:argType="com.ritanath.shopiify.data.CartSelectedProduct[]" />
     </fragment>
 </navigation>

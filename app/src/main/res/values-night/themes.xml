@@ -3,6 +3,6 @@
     <style name="Base.Theme.Shopiify" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-
+        <item name="android:statusBarColor">@color/dark_primary</item>
     </style>
 </resources>

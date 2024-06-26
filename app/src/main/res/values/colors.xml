@@ -12,7 +12,7 @@
     <color name="g_card_background">#FAFDFF</color>
     <color name="g_search_and_icons">#FAFBFC</color>
     <color name="g_line">#E9EAEC</color>
-    <color name="g_blue100">#B8D9FA</color>
+    <color name="g_blue100">#0E2954</color>
     <color name="g_red">#FF0000</color>
     <color name="g_gray500">#969899</color>
     <color name="g_orange_yellow">#F8BA00</color>
@@ -23,9 +23,9 @@
 
     <!-- dark mode-->
     <color name="dark_gray">#121212</color>
-    <color name="dark_blue">#211951</color>
-    <color name="light_blue">#836FFF</color>
-    <color name="light_green">#15F5BA</color>
+    <color name="dark_primary">#0F0F0F</color>
+    <color name="dark_secondary">#232D3F</color>
+    <color name="light_purple">#D4ADFC</color>
     <color name="light_white">#F0F3FF</color>
 
 
